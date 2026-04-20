@@ -1,0 +1,83 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANVIL | Спортивные трансляции и прогнозы</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Критический CSS для быстрого старта */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: #0a0a0f;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0a0a0f;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .preloader.hide {
+            display: none;
+        }
+        .anvil-loader {
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(255, 59, 0, 0.2);
+            border-top-color: #ff3b00;
+            border-radius: 50%;
+            animation: spin 0.6s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="preloader" id="preloader">
+    <div class="anvil-loader"></div>
+</div>
+
+<header class="glass-header">
+    <div class="container header-content">
+        <div class="logo">
+            <i class="fas fa-fire-flame-curved"></i>
+            ANVIL<span>SPORTS</span>
+        </div>
+        <nav id="nav-links"></nav>
+    </div>
+</header>
+
+<main class="container" id="app"></main>
+
+<footer class="modern-footer">
+    <div class="footer-content">
+        <div class="footer-logo">
+            <i class="fas fa-fire-flame-curved"></i>
+            ANVIL SPORTS
+        </div>
+        <div class="footer-links">
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-discord"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p>© 2026 ANVIL — Прогнозы и прямые эфиры</p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
