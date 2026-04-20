@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANVIL | Киберспорт. Прогнозы. Прямые эфиры</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&family=Orbitron:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="anvil-header">
+    <div class="logo">
+        ANVIL <span>// PREDICT & STREAM</span>
+    </div>
+    <div class="nav-buttons" id="authButtons">
+        <button id="loginBtn"><i class="fas fa-sign-in-alt"></i> Вход</button>
+        <button id="registerBtn"><i class="fas fa-user-plus"></i> Регистрация</button>
+        <button id="logoutBtn" style="display:none;"><i class="fas fa-sign-out-alt"></i> Выйти</button>
+        <span id="userRoleBadge"></span>
+    </div>
+</header>
+
+<div class="container">
+    <div id="welcomeArea" class="welcome-message"></div>
+
+    <div class="section-title">
+        <i class="fas fa-tower-broadcast"></i>
+        <span>ПРЯМЫЕ ЭФИРЫ И МАТЧИ</span>
+    </div>
+    
+    <div id="streamsList" class="stream-grid"></div>
+
+    <!-- Админ панель (скрыта для обычных пользователей) -->
+    <div id="adminPanel" style="display: none;">
+        <div class="admin-panel">
+            <h3><i class="fas fa-crown"></i> АДМИН-ПАНЕЛЬ ANVIL</h3>
+            <p><i class="fas fa-info-circle"></i> Управление расписанием и ссылками на эфиры (YouTube / Twitch без ошибок)</p>
+            <div class="admin-form" id="adminForm">
+                <input type="text" id="eventTitle" placeholder="Название матча / события" required>
+                <input type="datetime-local" id="eventDatetime" required>
+                <input type="text" id="streamUrl" placeholder="Ссылка YouTube или Twitch (URL)" required>
+                <textarea id="eventDesc" placeholder="Краткое описание события" rows="2"></textarea>
+                <div class="flex-row">
+                    <button id="addEventBtn" class="btn-like"><i class="fas fa-plus"></i> Добавить эфир</button>
+                    <select id="editEventSelect">
+                        <option value="">-- Выбрать событие для редактирования --</option>
+                    </select>
+                    <button id="deleteEventBtn" class="btn-like" style="background:#5a1e1e;"><i class="fas fa-trash"></i> Удалить выбранное</button>
+                </div>
+            </div>
+            <div id="adminMsg" class="error-msg" style="display:none;"></div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
